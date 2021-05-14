@@ -1,0 +1,143 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: #eee;
+}
+.header{
+	height: 70px;
+	line-height: 70px;
+	width: 100%;
+	background-color: #354457;
+	color: #b3bcc5;
+	font-size: 14px;
+}
+.header .logo{
+	margin-left: 20px;
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+}
+.left-menu{
+	width: 200px;
+	height: calc(100vh - 70px);
+	background-color: #4d5e70;
+	color: #b3bcc5;
+	line-height: 40px;
+	font-size: 14px;
+}
+.left-menu dt{
+	padding-left: 10px;
+}
+.left-menu dd{
+	padding-left: 40px;
+}
+
+.left-menu .active{
+	background-color: #dddddd;
+}
+
+.left-menu .active a{
+	color: #354457;
+}
+
+.left-menu a {
+	text-decoration: none;
+	color: #b3bcc5;
+	display: block;
+	width: 100%;
+}
+
+
+
+.right-content{
+	position: absolute;
+	left: 200px;
+	top: 70px;
+	height: calc(100vh - 70px);
+	width: calc(100% - 200px);
+	overflow: hidden;
+	user-select: none;
+}
+
+#stuList{
+	height: 1000px;
+}
+#stuList table{
+	width: 100%;
+	text-align: center;
+	line-height: 30px;
+}
+#stuList table thead {
+	background-color: #e3e8ee;
+	color: #646987;
+}
+#stuList table tbody{
+	background-color: #fff;
+}
+#stuList table .btn{
+	padding: 5px 8px;
+	border: none;
+	border-radius: 0;
+	color: #fff;
+	cursor: pointer;
+	outline: none;
+}
+#stuList table .btn-edit{
+	background-color: #5cb85c;
+}
+
+#stuList table .btn-delete{
+	background-color: #d9534f;
+}
+
+
+
+#addStu{
+	height: 1000px;
+}
+
+form{
+	margin: 0 auto;
+	padding-top: 10px;
+	width: 400px;
+}
+form p{
+	padding: 5px 50px;
+}
+
+form p label:not(.sex){
+	display: inline-block;
+	width: 50px;
+	text-align: right;
+	margin-right: 10px;
+}
+form p .btn{
+	padding: 2px 10px;
+	cursor: pointer;
+}
+
+
+/* 遮罩层 */
+.mask{
+	display: none;
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.5);
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+}
+.mask-content{
+	position: absolute;
+	width: 400px;
+	height: 400px;
+	background-color: #fff;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	padding: 20px;
+}

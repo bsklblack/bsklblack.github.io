@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="page/index.css"/>
+	</head>
+	<body>
+		
+		<!-- 顶部 -->
+		<div class="header">
+			<img src="images/logo.png" class="logo">
+			<span>CTL教育</span>
+		</div>
+		<!-- 左侧菜单 -->
+		<dl class="left-menu">
+			<dt>
+				学生管理
+			</dt>
+			<dd class="active">
+				<a href="#stuList">学生列表</a>
+			</dd>
+			<dd>
+				<a href="#addStu">新增学生</a>
+			</dd>
+		</dl>
+		<!-- 右侧内容区 -->
+		<div class="right-content">
+			<div id="stuList">
+				<table>
+					<thead>
+						<tr>
+							<th>学号</th>
+							<th>姓名</th>
+							<th>性别</th>
+							<th>邮箱</th>
+							<th>年龄</th>
+							<th>手机号</th>
+							<th>住址</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						
+					</tbody>
+				</table>
+				<div class="turnpage"></div>
+			</div>
+			<div id="addStu">
+				<form action="" method="get" id="student-add-form">
+					<p>
+						<label for="name">姓名</label>
+						<input type="text" name="name" id="name" value="" />
+					</p>
+					<p>
+						<label>性别</label>
+						<label class="sex" for="male">男</label><input type="radio" checked="checked"  name="sex" id="male"  value="0" />
+						<label class="sex" for="female">女</label><input type="radio" name="sex" id="female" value="1" />
+					</p>
+					<p>
+						<label for="email">邮箱</label>
+						<input type="text" name="email" id="email" value="" />
+					</p>
+					<p>
+						<label for="sNo">学号</label>
+						<input type="text" name="sNo" id="sNo" value="" />
+					</p>
+					<p>
+						<label for="birth">出生年</label>
+						<input type="text" name="birth" id="birth" value="" />
+					</p>
+					<p>
+						<label for="phone">手机号</label>
+						<input type="text" name="phone" id="phone" value="" />
+					</p>
+					<p>
+						<label for="address">住址</label>
+						<input type="text" name="address" id="address" value="" />
+					</p>
+					<p>
+						<label for="name"></label><input type="submit" id="student-add-btn" value="提交" class="btn" />
+						<input type="reset" name="" id="student-add-reset" value="重置" class="btn" />
+					</p>
+					
+				</form>
+			</div>
+		</div>
+		<div class="mask">
+			<div class="mask-content">
+				<h3>编辑信息</h3>
+				<form id="student-edit-form">
+					<p>
+						<label for="name">姓名</label>
+						<input type="text" name="name" id="name" value="" />
+					</p>
+					<p>
+						<label>性别</label>
+						<label class="sex" for="male">男</label><input type="radio" checked="checked"  name="sex" id="male"  value="0" />
+						<label class="sex" for="female">女</label><input type="radio" name="sex" id="female" value="1" />
+					</p>
+					<p>
+						<label for="email">邮箱</label>
+						<input type="text" name="email" id="email" value="" />
+					</p>
+					<p>
+						<label for="sNo">学号</label>
+						<input type="text" name="sNo" id="sNo" di value="" />
+					</p>
+					<p>
+						<label for="birth">出生年</label>
+						<input type="text" name="birth" id="birth" value="" />
+					</p>
+					<p>
+						<label for="phone">手机号</label>
+						<input type="text" name="phone" id="phone" value="" />
+					</p>
+					<p>
+						<label for="address">住址</label>
+						<input type="text" name="address" id="address" value="" />
+					</p>
+					<p>
+						<label for="name"></label><input type="submit" id="student-edit-btn" value="提交" class="btn" />
+					</p>
+				</form>
+			</div>
+		</div>
+		
+		<script src="js/mock.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="api/mockApi.js" type="text/javascript" charset="utf-8"></script>
+		<script src="api/api.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js"></script>
+		<script src="page/index.js" type="text/javascript" charset="utf-8"></script>
+		
+	</body>
+</html>

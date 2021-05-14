@@ -1,0 +1,21 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.my-page-wrap{
+	list-style: none;
+}
+.my-page-wrap *{
+	float: left;
+	user-select: none;
+}
+.my-page-wrap li {
+	padding: 5px 10px;
+	border: 1px solid #eee;
+	margin: 0 5px;
+	cursor: pointer;
+}
+.my-page-wrap li.my-page-current{
+	background-color: #428bca;
+	color: #fff;
+}
