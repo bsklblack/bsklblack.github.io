@@ -14,7 +14,7 @@
 
 <body>
 
-    <div class="container-fluid">
+    <div class="container-fluid overflow-hidden" >
         <div class="row justify-content-end">
             <!-- 左侧内容 -->
             <div class="col-lg-4 position-fixed border-right leftCon">
@@ -87,7 +87,7 @@
                 </div>
             </div>
             <!-- 右侧内容 -->
-            <div class="col-lg-8 bg-light">
+            <div class="col-lg-8 bg-light" id="test">
                 <!-- 轮播区 -->
                 <div class="row">
                     <div id="topCarousel" class="carousel slide" data-ride="carousel">
@@ -249,43 +249,43 @@
                 </div>
             </div>
         </div>
+        <!-- 底部菜单 -->
+        <footer class="fixed-bottom d-sm-none bg-white pb-2 footer ">
+            <ul class="d-flex list-unstyled justify-content-around mb-0">
+                <li class="text-center">
+                    <a href="" class="text-muted active">
+                        <span class="iconfont icon-shouye d-block"></span>
+                        <span>首页</span>
+                    </a>
+                </li>
+                <li class="text-center">
+                    <a href="" class="text-muted">
+                        <span class="iconfont icon-mendian d-block"></span>
+                        <span>门店</span>
+                    </a>
+                </li>
+                <li class="text-center">
+                    <a href="" class="text-muted">
+                        <span class="iconfont icon-weibiaoti5 d-block"></span>
+                        <span>我的账户</span>
+                    </a>
+                </li>
+                <li class="text-center">
+                    <a href="" class="text-muted">
+                        <span class="iconfont icon-caidan d-block"></span>
+                        <span>菜单</span>
+                    </a>
+                </li>
+                <li class="text-center">
+                    <a id="bottomMore"  class="text-muted">
+                        <span class="iconfont icon-gengduo d-block"></span>
+                        <span>更多</span>
+                    </a>
+                </li>
+            </ul>
+
+        </footer>
     </div>
-    <!-- 底部菜单 -->
-    <footer class="fixed-bottom d-sm-none bg-white pb-2 footer">
-        <ul class="row d-flex list-unstyled justify-content-around mb-0">
-            <li class="text-center">
-                <a href="" class="text-muted active">
-                    <span class="iconfont icon-shouye d-block"></span>
-                    <span>首页</span>
-                </a>
-            </li>
-            <li class="text-center">
-                <a href="" class="text-muted">
-                    <span class="iconfont icon-mendian d-block"></span>
-                    <span>门店</span>
-                </a>
-            </li>
-            <li class="text-center">
-                <a href="" class="text-muted">
-                    <span class="iconfont icon-weibiaoti5 d-block"></span>
-                    <span>我的账户</span>
-                </a>
-            </li>
-            <li class="text-center">
-                <a href="" class="text-muted">
-                    <span class="iconfont icon-caidan d-block"></span>
-                    <span>菜单</span>
-                </a>
-            </li>
-            <li class="text-center">
-                <a href="" class="text-muted">
-                    <span class="iconfont icon-gengduo d-block"></span>
-                    <span>更多</span>
-                </a>
-            </li>
-        </ul>
-
-    </footer>
 
 
 
@@ -293,59 +293,67 @@
 
 
 
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script>
-            $("#closeBtn").click(function () {
-                $(".menu").addClass("hide");
-                shadowMenu()
-            })
 
-            $("#showBtn").click(function () {
-                $(".menu").removeClass("hide")
-                shadowMenu()
-            })
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $("#closeBtn").click(function () {
+            $(".menu").addClass("hide");
+            shadowMenu()
+        })
 
-
-
-
-            $(window).resize(shadowMenu)
+        $("#showBtn").click(function () {
+            $(".menu").removeClass("hide")
+            shadowMenu()
+        })
 
 
-            // 当菜单弹出的时候，不要出现滚动条
-            function shadowMenu() {
-                // 当窗口宽度小于992，并且菜单打开时，才让滚动条消失
-                if ($(window).innerWidth() <= 992 && !$(".menu").hasClass("hide")) {
-                    $('body').css('overflow', 'hidden');
-                } else {
-                    $('body').css('overflow', 'auto');
-                }
+        $("#bottomMore").click(function () {
+            $(".menu").removeClass("hide")
+            $('body').scrollTop(0)
+            document.documentElement.scrollTop = 0;
+            shadowMenu()
+        })
+
+
+
+        $(window).resize(shadowMenu)
+
+
+        // 当菜单弹出的时候，不要出现滚动条
+        function shadowMenu() {
+            // 当窗口宽度小于992，并且菜单打开时，才让滚动条消失
+            if ($(window).innerWidth() <= 992 && !$(".menu").hasClass("hide")) {
+                $('body').css('overflow', 'hidden');
+            } else {
+                $('body').css('overflow', 'auto');
             }
+        }
 
 
 
-            $(".left").click(function(){
-                const oUl = $(".scroll ul")
-                let oldLeft = parseInt(oUl.css("left"));
-                const teahWidth = $(".teah").innerWidth();
-                const ulWidth = oUl.innerWidth()
-                if(oldLeft <= (teahWidth - ulWidth)){
-                    return
-                }
-                oUl.css("left", oldLeft - 300 + "px")
-            })
+        $(".left").click(function () {
+            const oUl = $(".scroll ul")
+            let oldLeft = parseInt(oUl.css("left"));
+            const teahWidth = $(".teah").innerWidth();
+            const ulWidth = oUl.innerWidth()
+            if (oldLeft <= (teahWidth - ulWidth)) {
+                return
+            }
+            oUl.css("left", oldLeft - 300 + "px")
+        })
 
-            $(".right").click(function(){
-                const oUl = $(".scroll ul")
-                let oldLeft = parseInt(oUl.css("left"));
-                if(oldLeft >= 0){
-                    return
-                }
-                oUl.css("left", oldLeft + 300 + "px")
-            })
+        $(".right").click(function () {
+            const oUl = $(".scroll ul")
+            let oldLeft = parseInt(oUl.css("left"));
+            if (oldLeft >= 0) {
+                return
+            }
+            oUl.css("left", oldLeft + 300 + "px")
+        })
 
 
-        </script>
+    </script>
 </body>
 
 </html>

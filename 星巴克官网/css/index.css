@@ -191,8 +191,12 @@ a:hover{
 
 
 /* 底部 */
+.footer{
+    width: 100vw;
+}
 .footer ul{
     box-shadow: 0 0  4px rgba(0, 0, 0, .12);
+    width: 100vw;
 }
 .footer a span.iconfont{
     font-size: 2.5rem;
