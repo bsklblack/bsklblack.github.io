@@ -155,13 +155,6 @@ img {
   display: flex;
   align-items: center;
 }
-.news-list .news-item a {
-  flex-grow: 1;
-  overflow-x: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  margin: 0 0.24rem;
-}
 .news-list .news-item::before {
   content: "";
   font-size: 0.2rem;
@@ -169,6 +162,13 @@ img {
   padding: 0 0.1rem;
   white-space: nowrap;
   border-radius: 0.05rem;
+}
+.news-list .news-item a {
+  flex-grow: 1;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 0 0.24rem;
 }
 .news-list .news-item.hot::before {
   content: "热门";
