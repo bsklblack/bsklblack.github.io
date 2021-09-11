@@ -1,0 +1,28 @@
+.fr{
+    float: right;
+}
+.fl{
+    float: left;
+}
+.px-7{
+    padding-left: 7px;
+    padding-right: 7px;
+}
+.text-red{
+    color: #f10215;
+}
+.position-relative{
+    position: relative;
+}
+
+.clear::before{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.w{
+    width: 1190px;
+    margin: 0 auto;
+    position: relative;
+}

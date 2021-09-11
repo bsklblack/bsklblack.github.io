@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./swiper/index.css">
+    <title>京东首页</title>
+    <style>
+       
+        .demo{
+            width: 400px;
+            height: 300px;
+            border: 1px solid;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="demo">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+
+
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script src="./swiper/index.js"></script>
+    <script>
+        $('.demo').swiper({
+            // 切换内容
+            contentList: $('.item'),
+            // 自动切换时间
+            autoChangeTime: 3000,
+            // 轮播动画类型
+            type: "animate",
+            // 是否自动轮播
+            isAuto: true,
+            // 左右按钮显示状态：always一直显示，hide隐藏，hover鼠标移入显示
+            showChangeBtn: 'always',
+            // 是否显示小圆点
+            showSpots: true,
+            // 小圆点大小
+            spotSize: 10,
+            // 小圆点位置 center居中，left左侧，right右侧
+            spotPosition: 'left',
+            // 小圆点颜色
+            spotColor: "red",
+            // 轮播内容大小
+            width: 400,
+            height: 300,
+        })
+
+    </script>
+</body>
+
+</html>

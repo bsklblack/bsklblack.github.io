@@ -1,0 +1,67 @@
+.swiper-wrapper > *{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.swiper-wrapper{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+/* 滑动 */
+.swiper-wrapper_animate .swiper-items{
+    position: absolute;
+}
+.swiper-wrapper_animate .swiper-item{
+    float: left;
+}
+
+
+/* 淡出 */
+.swiper-wrapper_fade .swiper-item{
+    position: absolute;
+    display: none;
+}
+
+.swiper-btn{
+    width : 25px;
+    height: 35px;
+    background-color: rgba(0,0,0,.15);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 35px;
+    color: rgba(255,255,255,.8);
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+.swiper-btn.swiper-lbtn{
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    left: 0;
+}
+.swiper-btn.swiper-rbtn{
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+    right: 0;
+}
+.swiper-spots {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.swiper-spots span{
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 4px;
+    border: 1px solid rgba(0,0,0,.05);
+    background: rgba(255,255,255,.4);
+    cursor: pointer;
+}
