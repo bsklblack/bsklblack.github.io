@@ -1,0 +1,118 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.wrapper{
+	margin: 0 auto;
+	width: 600px;
+}
+.wrapper__head{
+	height:40px;
+	background-color: grey;
+	color: #fff;
+	line-height: 40px;
+	text-align: center;
+}
+.wrapper__body{
+	height: calc(100vh - 90px);
+	background-color: #eee;
+	padding: 10px;
+	box-sizing: border-box;
+	position: relative;
+	overflow-y: auto;
+}
+
+.wrapper__body .receive{
+	margin-bottom: 10px;
+	width: 60%;
+	display: inline-block;
+}
+
+.wrapper__body .receive div{
+	display: inline-block;
+	background-color: #fff;
+	padding: 5px 10px;
+	border-radius: 4px;
+	vertical-align: top;
+	margin-left: 5px;
+	position: relative;
+	max-width: 80%;
+}
+.wrapper__body .receive div::before{
+	content: "";
+	display: inline-block;
+	position: absolute;
+	left: -10px;
+	top: 10px;
+	border-left: 5px solid transparent;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-right: 5px solid #fff;
+	
+}
+.wrapper__body .receive img{
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+}
+
+
+.wrapper__body .send{
+	float: right;
+	width: 60%;
+	margin-bottom: 10px;
+	text-align: right;
+}
+.wrapper__body .send img{
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+}
+.wrapper__body .send div{
+	max-width: 80%;
+	display: inline-block;
+	margin-right: 5px;
+	background-color: greenyellow ;
+	padding: 5px 10px;
+	border-radius: 4px;
+	vertical-align: top;
+	position: relative;
+}
+
+.wrapper__body .send div::after{
+	content: "";
+	display: inline-block;
+	position: absolute;
+	right: -10px;
+	top: 10px;
+	border-left: 5px solid #fff;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-right: 5px solid transparent;
+	
+}
+
+.wrapper__bottom{
+	height: 50px;
+	line-height: 50px;
+	background-color: rgb(221, 221, 221);
+	padding: 0 5px;
+}
+.wrapper__bottom input{
+	border: none;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 10px;
+	width: 490px;
+	outline: none;
+}
+.wrapper__bottom button{
+	background-color: #768627;
+	border: none;
+	height: 30px;
+	width: 85px;
+	color: #fff;
+	border-radius: 4px;
+	outline: none;
+	cursor: pointer;
+}

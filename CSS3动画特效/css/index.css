@@ -1,0 +1,67 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: #F7E8ED;
+}
+
+.content{
+	perspective : 1000px
+}
+
+.wrapper{
+	width: 1190px;
+	margin: 100px auto;
+	transform-style: preserve-3d;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	
+}
+
+.box{
+	width: 150px;
+	height: 150px;
+	position: relative;
+	transform-style: preserve-3d;
+	transition: .5s;
+	margin-top: 12px;
+}
+
+.box div{
+	width: 100%;
+	height: 100%;
+	border: 10px solid rgba(0, 0, 0, .1);
+	position: absolute;
+	box-sizing: border-box;
+	font-size: 50px;
+	font-weight: bold;
+	text-align: center;
+	color: #fff;
+	line-height: 130px;
+	text-shadow: 0 3px 10px rgb(0, 0, 0);
+}
+
+.box div:nth-of-type(1){
+	z-index: 2;
+}
+/* 上面 */
+.box div:nth-of-type(2){
+	transform: rotateX(90deg) translateY(-75px) translateZ(75px);
+}
+/* 下面 */
+.box div:nth-of-type(3){
+	transform: rotateX(90deg) translateY(-75px) translateZ(-75px);
+}
+/* 右边 */
+.box div:nth-of-type(4){
+	transform: rotateY(90deg) translateX(75px) translateZ(75px);
+}
+/* 左边 */
+.box div:nth-of-type(5){
+	transform: rotateY(90deg) translateX(75px) translateZ(-75px);
+}
+/* 后边 */
+.box div:nth-of-type(6){
+	transform: translateZ(-150px);
